@@ -16,7 +16,7 @@ function createRootReducer(additionalReducers = {}) {
 
 const rootReducer = createRootReducer();
 
-
+// Pass the rootReducer to the reducerBatchUpdatesEnhancer from the package
 const store = createStore(
     reducerBatchUpdatesEnhancer(rootReducer),
 )

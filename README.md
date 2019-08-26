@@ -22,6 +22,8 @@
 		return  combineReducers(Object.assign({}, additionalReducers, reducers))
 	}
 	const  rootReducer  =  createRootReducer();
+
+    // Pass the rootReducer to the reducerBatchUpdatesEnhancer from the package
 	const  store  =  createStore(
 		reducerBatchUpdatesEnhancer(rootReducer),
 	)
@@ -29,8 +31,6 @@
 	// Start a transaction by dispatch startBatchMode action
 
     store.dispatch(actions.startBatchMode());
-
-    
 
     store.subscribe(() => {
 
