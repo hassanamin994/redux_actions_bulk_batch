@@ -3,6 +3,10 @@
 
 #### See examples folder
 
+### Installation:
+
+> npm i --save redux-actions-bulk-batch
+
 ## Working example:
 
     import { createStore, combineReducers } from  'redux'
