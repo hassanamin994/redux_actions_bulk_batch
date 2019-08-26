@@ -29,20 +29,12 @@
 	)
 
 	// Start a transaction by dispatch startBatchMode action
-
     store.dispatch(actions.startBatchMode());
 
-    store.subscribe(() => {
-
-    console.log(store.getState())
-
-    })
-
     // This should've triggered 5 state updates for ADD_TODO, however using the package it will just trigger one update;
-
     for(let  i  =  0; i  <  5; i++) {
 
-    store.dispatch({ type: ADD_TODO, payload: 'DO SOMETHING '});
+        store.dispatch({ type: ADD_TODO, payload: 'DO SOMETHING '});
 
     }
 

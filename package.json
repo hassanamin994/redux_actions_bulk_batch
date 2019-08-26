@@ -1,6 +1,6 @@
 {
   "name": "redux-actions-bulk-batch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tiny package to batch redux updates on demand avoiding unnecessary re-renders",
   "main": "index.js",
   "scripts": {
