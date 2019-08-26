@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/hassanamin994/redux_actions_bulk_batch#readme",
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "redux": "^4.0.4"
   }
 }
