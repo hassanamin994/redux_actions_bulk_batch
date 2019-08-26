@@ -1,10 +1,12 @@
 # redux-actions-bulk-batch 
 ###  A tiny package to batch redux updates on demand avoiding unnecessary re-renders
 
+#### See examples folder
+
 ## Working example:
 
     import { createStore, combineReducers } from  'redux'
-	import { reducer, reducerBatchUpdatesEnhancer, actions } from  '../index';
+	import { reducer, reducerBatchUpdatesEnhancer, actions } from  'redux-actions-bulk-batch';
 	import { ADD_TODO } from  './types';
 	import  todoReducer  from  './todoReducer';
 
