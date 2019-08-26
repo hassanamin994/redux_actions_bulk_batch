@@ -13,9 +13,10 @@
  - After all actions have been dispatched, dispatch `flushBatchedActions()` action to execute all actions from step 2 
 
 ### Notes:
-	
 
- - After calling `actions.startBatchMode()`, all state updates gets cached to be executed at one go when 
+- It's very important to have in your reducers the reducer this package uses with the key `batchReduxUpdates`, otherwise this will not work
+- The root reducer that's returned from combinedReducers should be passed to the reducerBatchUpdatesEnhancer enhancer
+- After calling `actions.startBatchMode()`, all state updates gets cached to be executed at one go when 
 `flushBatchedActions()` is called.
 - Make sure to eventually run `flushBatchedActions()` to give control back to the store
 
@@ -27,6 +28,9 @@
 	import  todoReducer  from  './todoReducer';
 
 	function  createRootReducer(additionalReducers  = {}) {
+        // It's very important to have in your reducers 
+        // the reducer this package uses with the key
+        // `batchReduxUpdates`, otherwise this will not work
 		const  reducers  = {
 			batchReduxUpdates: reducer,
 			todo: todoReducer,
