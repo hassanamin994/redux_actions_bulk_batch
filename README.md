@@ -6,6 +6,18 @@
 ### Installation:
 
 > npm i --save redux-actions-bulk-batch
+### Usage:
+
+ - dispatch a `startBatchMode()` action to halt the state update
+ - dispatch all actions normally that you want batched
+ - After all actions have been dispatched, dispatch `flushBatchedActions()` action to execute all actions from step 2 
+
+### Notes:
+	
+
+ - After calling `actions.startBatchMode()`, all state updates gets cached to be executed at one go when 
+`flushBatchedActions()` is called.
+- Make sure to eventually run `flushBatchedActions()` to give control back to the store
 
 ## Working example:
 
